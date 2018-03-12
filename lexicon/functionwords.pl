@@ -220,6 +220,8 @@ digits([D|Rest]) :-
 %
 % Only integers 0-12 are supported as words.
 
+% TODO: More Number support;
+
 rawnumber_number(RawNumber, RawNumber) :-
 	number(RawNumber).
 
@@ -242,6 +244,7 @@ rawnumber_number(dozen, 12).
 % Capitalized versions of the number words
 % as numbers can also be used at the beginning of
 % the sentences, e.g. 'Four men wait.'
+
 rawnumber_number('Null', 0).
 rawnumber_number('Zero', 0).
 rawnumber_number('One', 1).

@@ -139,11 +139,13 @@ ape :-
 %
 get_arglist(RawArgList, ArgList) :-
     append(_, ['--'|ArgList], RawArgList),
+    write("get_arglist RawArgList"),
     !.
 
 % TODO: on which OS is this needed?
 get_arglist([NonFlag|ArgList], ArgList) :-
 	\+ atom_concat('-', _, NonFlag),
+	write("get_arglist ArgList"),
 	!.
 
 get_arglist(ArgList, ArgList).
