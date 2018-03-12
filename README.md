@@ -1,20 +1,6 @@
 APE - ACE Parsing Engine
 ========================
 
-Authors: Kaarel Kaljurand, Norbert E. Fuchs, Tobias Kuhn
-
-
-Introduction
-------------
-
-This document explains how APE (ACE Parsing Engine) is compiled and used.
-
-In order to compile and run APE, you first need to install a recent version of SWI-Prolog.
-SWI-Prolog is free software and can be downloaded from <http://www.swi-prolog.org>. Note that you
-minimally need to install the following SWI Prolog packages: `clib`, `sgml`, and `http`. To view
-the documentation embedded in the source files you also need `pldoc`.
-
-
 Compilation
 -----------
 
@@ -239,6 +225,15 @@ context of `ape.exe`. For example, the following command displays the source cod
     swipl -x ./ape.exe -g listing
 
 
+Debug
+----
+
+    swipl -s ape.pl -s ape -- -text 'John moves three boxes to John.' -cfol
+
+    guitracer.
+    trace.
+    ape.
+
 Code
 ----
 
@@ -270,11 +265,3 @@ Apart from these main packages, there are some additional folders:
 
 For more information consult the commented source files.
 
-
-Mailing List
-------------
-
-If you encounter problems, you can get help from the Attempto community. Visit the Attempto Mailing
-List site:
-
-  http://attempto.ifi.uzh.ch/site/mailinglist/
